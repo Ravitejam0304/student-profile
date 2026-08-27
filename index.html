@@ -1,9 +1,340 @@
-<htlm>
-  <head>Stduent database</head>
-  <body>
-    <h1>student profile</h1>
-    <h2>personal info</h2>
-    <h3>course</h3>
-    <h4>feestructure</h4>
-  </body>
-</htlm>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: #1e293b;
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav h2 {
+            color: white;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        #home {
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #0f172a, #2563eb);
+            color: white;
+            padding: 40px;
+        }
+
+        .home-content h1 {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .home-content h2 {
+            font-size: 28px;
+            color: #bae6fd;
+            margin-bottom: 20px;
+        }
+
+        .home-content p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 18px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #38bdf8;
+            color: #0f172a;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 70px 8%;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 32px;
+            color: #1e293b;
+        }
+
+        .about {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .skill {
+            background: white;
+            padding: 20px 35px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            font-weight: bold;
+        }
+
+        .education {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .education-card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 5px solid #2563eb;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .education-card h3 {
+            color: #2563eb;
+        }
+
+        .projects {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+            width: 300px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .project-card h3 {
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        .contact {
+            max-width: 600px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 10px;
+            font-size: 18px;
+        }
+
+        footer {
+            background: #1e293b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .home-content h1 {
+                font-size: 38px;
+            }
+
+            .home-content h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>My Portfolio</h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div class="home-content">
+            <h1>Hi, I'm Ravi Teja</h1>
+            <h2>Student | Python Developer | Web Developer</h2>
+
+            <p>
+                I am a passionate student interested in programming,
+                web development, artificial intelligence and software development.
+            </p>
+
+            <a href="#contact" class="btn">Contact Me</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+
+        <div class="about">
+            <p>
+                I am a motivated computer science student with an interest
+                in software development and emerging technologies.
+            </p>
+
+            <p>
+                I enjoy learning Python, SQL, HTML, CSS, JavaScript,
+                Artificial Intelligence and Machine Learning.
+            </p>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+
+        <div class="education">
+
+            <div class="education-card">
+                <h3>Master of Computer Applications</h3>
+                <p>RVR & JC College of Engineering</p>
+                <p>2025 - Present</p>
+            </div>
+
+            <div class="education-card">
+                <h3>Bachelor's Degree</h3>
+                <p>Computer Science</p>
+                <p>2022 - 2025</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+
+        <div class="skills-container">
+            <div class="skill">Python</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">React</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Machine Learning</div>
+            <div class="skill">GenAI</div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+
+        <div class="projects">
+
+            <div class="project-card">
+                <h3>GenAI College Chatbot</h3>
+
+                <p>
+                    An AI-powered chatbot designed to answer student
+                    questions related to college information, academics,
+                    examinations and campus services.
+                </p>
+
+                <p><strong>Technologies:</strong> Python, GenAI, HTML, CSS</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Student Management System</h3>
+
+                <p>
+                    A web-based application for managing student information,
+                    courses, marks and academic records.
+                </p>
+
+                <p><strong>Technologies:</strong> HTML, CSS, JavaScript, SQL</p>
+            </div>
+
+            <div class="project-card">
+                <h3>EDA Data Analysis</h3>
+
+                <p>
+                    Exploratory Data Analysis project using Iris and Titanic
+                    datasets to understand data distributions and relationships.
+                </p>
+
+                <p><strong>Technologies:</strong> Python, Pandas, NumPy, Matplotlib</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+
+        <div class="contact">
+            <p>Email: yourname@gmail.com</p>
+            <p>Phone: +91 XXXXX XXXXX</p>
+            <p>Location: Andhra Pradesh, India</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Ravi Teja | Student Portfolio</p>
+    </footer>
+
+</body>
+</html>
